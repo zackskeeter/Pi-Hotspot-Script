@@ -156,6 +156,11 @@ display_message "Activating SQL authentication"
 sed -i '/^#.*sql$/s/^#//g' /etc/freeradius/sites-available/default
 check_returned_code $?
 
+execute_command "freeradius -X" 
+echo "insert into radcheck (username, attribute, op, value) values ('usertest', 'Cleartext-Password', ':=', 'passwd');" | mysql -u root -p$MYSQL_PASSWORD radius
+radtest usertest passwd localhost 0 $COOVACHILLI_SECRETKEY
+check_returned_code $?
+
 execute_command "freeradius -C" true "Checking freeradius configuration"
 execute_command "service freeradius start" true "Starting freeradius service"
 
