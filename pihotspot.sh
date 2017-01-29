@@ -12,11 +12,11 @@ MYSQL_PASSWORD="pihotspot"
 # Name of the hotspot that will be visible for users/customers
 HOTSPOT_NAME="pihotspot"
 # IP of the hotspot
-HOTSPOT_IP="192.168.10.1"
+HOTSPOT_IP="192.168.1.2"
 # Network where the hotspot is located
-HOTSPOT_NETWORK="192.168.10.0"
+HOTSPOT_NETWORK="192.168.1.1"
 # Secret word for CoovaChilli
-COOVACHILLI_SECRETKEY="change-me" 
+COOVACHILLI_SECRETKEY="testone" 
 # WAN interface (the one with Internet)
 WAN_INTERFACE="eth0"
 # LAN interface (the one for the hotspot)
