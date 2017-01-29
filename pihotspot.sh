@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # PLEASE EDIT NEXT LINES TO DEFINE YOUR OWN CONFIGURATION
 
